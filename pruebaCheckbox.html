@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<div id="rates" style="display:none">
+    <input type="radio" id="r1" name="rate" value="Infantil"> Infantil
+    <input type="radio" id="r2" name="rate" value="Juvenil"> Juvenil
+    <input type="radio" id="r3" name="rate" value="Senior" checked="checked"> Senior
+</div>
+    <p>se despliega cuando checkbox es checked:</p>
+
+    Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+    <p id="text" style="display:none" > Indica numero de socio</p>
+
+    <input type="text" style="display:none" id="codigo" />
+    <button onclick="validarNumeroSocio()" style="display:none">validar</button>
+
+    <script>
+
+
+function radioButon(){
+var rates = document.getElementById('rates').value;
+var rate_value;
+if(rates =='Infantil'){
+rate_value = document.getElementById('r1').value;
+
+}else if(rates =='Juvenil'){
+rate_value = document.getElementById('r2').value;
+
+}else if(rates =='Senior'){
+rate_value = document.getElementById('r3').value;
+}}
+
+document.getElementById('results').innerHTML = rate_value;
+        function myFunction() {
+            var checkBox = document.getElementById("myCheck");
+            var text = document.getElementById("text");
+            var rates=document.getElementById("rates");
+            if (checkBox.checked == true) {
+                
+                text.style.display = "block";
+                codigo.style.display = "block";
+               rates.style.display="block";
+            } else {
+                text.style.display = "none";
+                 codigo.style.display = "none";
+              rates.style.display="none";
+            }
+        }
+  
+  
+
+    function validarNumeroSocio() {
+        var input = document.getElementById("codigo").value;
+        console.log(parseInt(input))
+        if (input.length == 5 && parseInt(input) >= 10000 && parseInt(input) <= 99999) {
+            alert("numero socio valido");
+        } else {
+            alert("numero socio invalido");
+        }
+    }
+
+    function radioButon(){
+    var rates = document.getElementById('rates').value;
+    var rate_value;
+    if(rates =='Infantil'){
+    rate_value = document.getElementById('r1').value;
+
+    }else if(rates =='Juvenil'){
+    rate_value = document.getElementById('r2').value;
+
+    }else if(rates =='Senior'){
+    rate_value = document.getElementById('r3').value;
+    }}
+</script>
+
+
+</body>
+
+</html>
