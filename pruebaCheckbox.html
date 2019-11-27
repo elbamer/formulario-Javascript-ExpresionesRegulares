@@ -1,20 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 
 <body>
-<div id="rates" style="display:none">
-    <input type="radio" id="r1" name="rate" value="Infantil"> Infantil
-    <input type="radio" id="r2" name="rate" value="Juvenil"> Juvenil
-    <input type="radio" id="r3" name="rate" value="Senior" checked="checked"> Senior
-</div>
+
+
     <p>se despliega cuando checkbox es checked:</p>
 
     Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
 
-    <p id="text" style="display:none" > Indica numero de socio</p>
+    <p id="text" style="display:none"> Indica numero de socio</p>
+
 
     <input type="text" style="display:none" id="codigo" />
-    <button onclick="validarNumeroSocio()" style="display:none">validar</button>
+    <button onclick="validarNumeroSocio()" id="codigo1" style="display:none">validar</button>
+    <div id="rates" style="display:none">
+        <input type="radio" id="r1" name="rate" value="Infantil"> Infantil
+        <input type="radio" id="r2" name="rate" value="Juvenil"> Juvenil
+        <input type="radio" id="r3" name="rate" value="Senior" checked="checked"> Senior
+    </div>
 
     <script>
 
@@ -37,15 +40,16 @@ document.getElementById('results').innerHTML = rate_value;
             var checkBox = document.getElementById("myCheck");
             var text = document.getElementById("text");
             var rates=document.getElementById("rates");
-            if (checkBox.checked == true) {
-                
+            if (checkBox.checked == true) {                
                 text.style.display = "block";
                 codigo.style.display = "block";
                rates.style.display="block";
+                codigo1.style.display = "block";
             } else {
                 text.style.display = "none";
                  codigo.style.display = "none";
               rates.style.display="none";
+              codigo1.style.display = "none";
             }
         }
   
