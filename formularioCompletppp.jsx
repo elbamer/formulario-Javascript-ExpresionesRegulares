@@ -7,9 +7,7 @@ function validarFormulario() {
     var expRegTelefono = /^([0-9]\s*)*$/;
     var formulario = document.getElementById("formulario");
     var nombres = document.getElementById("nombres");
-    var direccion = document.getElementById("direccion");
-    var pais = document.getElementById("pais");
-    var email = document.getElementById("email");
+       var email = document.getElementById("email");
     var Identificador = document.getElementById("Identificador");
     var telefono = document.getElementById("telefono");
     var comentario = document.getElementById("comentario");
@@ -77,6 +75,64 @@ function validarFormulario() {
 
     if (verificar == true) {
         document.formulario.submit();
+    }
+}
+
+function radioButon() {
+    var rates = document.getElementById('rates').value;
+    var rate_value;
+    if (rates == 'Infantil') {
+        rate_value = document.getElementById('r1').value;
+
+    } else if (rates == 'Juvenil') {
+        rate_value = document.getElementById('r2').value;
+
+    } else if (rates == 'Senior') {
+        rate_value = document.getElementById('r3').value;
+    }
+}
+
+document.getElementById('results').innerHTML = rate_value;
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    var rates = document.getElementById("rates");
+    if (checkBox.checked == true) {
+        text.style.display = "block";
+        codigo.style.display = "block";
+        rates.style.display = "block";
+        codigo1.style.display = "block";
+    } else {
+        text.style.display = "none";
+        codigo.style.display = "none";
+        rates.style.display = "none";
+        codigo1.style.display = "none";
+    }
+}
+
+
+
+function validarNumeroSocio() {
+    var input = document.getElementById("codigo").value;
+    console.log(parseInt(input))
+    if (input.length == 5 && parseInt(input) >= 10000 && parseInt(input) <= 99999) {
+        alert("numero socio valido");
+    } else {
+        alert("numero socio invalido");
+    }
+}
+
+function radioButon() {
+    var rates = document.getElementById('rates').value;
+    var rate_value;
+    if (rates == 'Infantil') {
+        rate_value = document.getElementById('r1').value;
+
+    } else if (rates == 'Juvenil') {
+        rate_value = document.getElementById('r2').value;
+
+    } else if (rates == 'Senior') {
+        rate_value = document.getElementById('r3').value;
     }
 }
 function limpiarFormulario() {

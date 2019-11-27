@@ -38,6 +38,19 @@
                         <option>Senior</option>
                     </select>
                 </p>
+                 <p>se despliega cuando checkbox es checked:</p>
+
+                 Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+                 <p id="text" style="display:none"> Indica numero de socio</p>
+
+                 <input type="text" style="display:none" id="codigo" />
+                 <button onclick="validarNumeroSocio()" id="codigo1" style="display:none">validar</button>
+                 <div id="rates" style="display:none">
+                     <input type="radio" id="r1" name="rate" value="Infantil"> Infantil
+                     <input type="radio" id="r2" name="rate" value="Juvenil"> Juvenil
+                     <input type="radio" id="r3" name="rate" value="Senior" checked="checked"> Senior
+                 </div>
             </fieldset>
             <br />
             <label for="comentario">Escribe tu comentario:</label><br />
@@ -51,9 +64,8 @@
         </form>
     </section>
     <footer>
-        &copy; Luis Rene Mas Mas
-        <p>Correo electronico: 01luisrene@gmail.com</p>
-        <address>
+        &copy; Elba Leon
+                <address>
             <p>Direcci&oacute;n:La Libertad/Trujillo/La Esperanza - Parque Industrial
         </address>
     </footer>
